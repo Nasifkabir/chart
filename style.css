@@ -1,0 +1,220 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and HTML: Full height with centering */
+  body, html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f5f7;
+  }
+  
+  /* Overlay for dark background behind the modal */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Modal Styling */
+  .modal {
+    background: #ffffff;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Earnings Info Styling */
+  .earnings-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  
+  /* Earnings Section */
+  .earnings-today {
+    text-align: left;
+    flex: 1;
+  }
+  
+  .earnings-today p {
+    font-size: 14px;
+    color: #7a7a7a;
+    margin-bottom: 5px;
+  }
+  
+  .earnings-today h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #3b3b3b;
+    margin-bottom: 5px;
+  }
+  
+  .earnings-today span {
+    font-size: 12px;
+    color: #9a9a9a;
+    display: block;
+  }
+  
+  /* Make the charts responsive */
+  #earningsChart, #salesChart, #revenueChart {
+    width: 100%;
+    height: 300px;
+    max-width: 850px;
+    margin: 20px auto;
+  }
+  
+  /* Swiper styling */
+  .swiper {
+    width: 100%;
+  }
+  
+  .swiper-slide {
+    padding: 20px;
+    overflow: hidden; /* Ensure content doesn't spill out */
+    width: 100%; /* Ensure the slide takes up full width */
+  }
+  
+  /* Buttons styling */
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  /* Button Styles */
+  #back {
+    background: #e0e0e0;
+    color: #333333;
+  }
+  
+  #back:hover {
+    background: #cccccc;
+  }
+  
+  #continue {
+    background: #3f51b5;
+    color: #ffffff;
+  }
+  
+  #continue:hover {
+    background: #2e3c8d;
+  }
+  
+  /* Swiper Pagination Styling */
+  .swiper-pagination {
+    margin-top: 15px;
+  }
+  
+  .swiper-pagination-bullet {
+    background: #cfcfcf;
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: #3f51b5;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    /* For medium-sized screens (tablets and smaller desktops) */
+    .modal {
+      width: 85%;
+      padding: 15px;
+    }
+  
+    .buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 12px;
+    }
+  
+    .earnings-today h2 {
+      font-size: 20px;
+    }
+  
+    .earnings-today p {
+      font-size: 13px;
+    }
+  
+    .earnings-today span {
+      font-size: 11px;
+    }
+  
+    /* Make charts smaller on tablets */
+    #earningsChart, #salesChart, #revenueChart {
+      height: 250px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* For smaller screens (mobile phones) */
+    .modal {
+      width: 90%;
+      padding: 10px;
+    }
+  
+    .earnings-today h2 {
+      font-size: 18px;
+    }
+  
+    .earnings-today p {
+      font-size: 12px;
+    }
+  
+    .earnings-today span {
+      font-size: 10px;
+    }
+  
+    /* Make charts smaller on mobile */
+    #earningsChart, #salesChart, #revenueChart {
+      height: 220px;
+    }
+  
+    /* Buttons stack vertically */
+    .buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    button {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  

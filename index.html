@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Onboarding</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+
+<div class="overlay">
+  <div class="modal">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1: Earnings Info -->
+        <div class="swiper-slide">
+          <div class="earnings-info">
+            <div class="earnings-today">
+              <p>Earnings today</p>
+              <h2>$1,421.56</h2>
+              <span>+15% Higher earnings than usual</span>
+            </div>
+            <canvas id="earningsChart"></canvas>
+          </div>
+          <h3>Get started</h3>
+          <p>Get started right away and track your revenue. On a clear dashboard, you can easily monitor all your progress live and watch your success grow.</p>
+        </div>
+
+        <!-- Slide 2: Bar Chart for Monthly Sales -->
+        <div class="swiper-slide">
+          <h3>Monthly Sales</h3>
+          <canvas id="salesChart"></canvas>
+        </div>
+
+        <!-- Slide 3: Pie Chart for Revenue Distribution -->
+        <div class="swiper-slide">
+          <h3>Revenue Distribution</h3>
+          <canvas id="revenueChart"></canvas>
+        </div>
+        
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <div class="buttons">
+      <button id="back">Back</button>
+      <button id="continue">Continue</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
